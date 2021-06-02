@@ -177,13 +177,8 @@ kaboom({
         })
       }
     });
-    keyDown("up", () => {
-      upAP = true;
-    });
-    keyRelease("up", () => {
-      upAP = false;
-    });
-if (upAP) {
+
+keyPress("up", () => {
       upLink.overlaps("beat", (a) => {
         destroy(a);
         scoreLabel.score++;
@@ -197,7 +192,7 @@ if (upAP) {
           destroy(pep);
         })
       });
-    }
+    });
 });
   
   start("ddr");
